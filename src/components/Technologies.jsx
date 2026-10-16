@@ -74,20 +74,20 @@ export default function Technologies() {
 
         {/* Section Title */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-xs font-semibold text-cyan-300 mb-4">
-            <Code2 className="w-3.5 h-3.5 text-cyan-400" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 dark:bg-cyan-500/10 light:bg-cyan-50 border border-cyan-500/30 dark:border-cyan-500/30 light:border-cyan-200 text-xs font-semibold text-cyan-300 dark:text-cyan-300 light:text-cyan-700 mb-4">
+            <Code2 className="w-3.5 h-3.5 text-cyan-400 dark:text-cyan-400 light:text-cyan-600" />
             <span>Interactive Explorer</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white dark:text-white light:text-slate-900 tracking-tight mb-4">
             Technologies Explored
           </h2>
-          <p className="text-base text-slate-400 leading-relaxed">
+          <p className="text-base text-slate-400 dark:text-slate-400 light:text-slate-600 leading-relaxed">
             A breakdown of technologies, frameworks, databases, and AI tooling studied throughout my development journey.
           </p>
         </div>
 
         {/* Search & Filtering Controls Bar */}
-        <div className="mb-10 p-4 sm:p-6 rounded-2xl bg-slate-900/80 border border-slate-800 backdrop-blur-md shadow-xl">
+        <div className="mb-10 p-4 sm:p-6 rounded-2xl bg-slate-900/80 dark:bg-slate-900/80 light:bg-white border border-slate-800 dark:border-slate-800 light:border-slate-200 backdrop-blur-md shadow-xl">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
 
             {/* Search Input */}
@@ -98,13 +98,13 @@ export default function Technologies() {
                 placeholder="Search technologies or topics (e.g., React, Flexbox, CRUD)..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-slate-950/80 border border-slate-700/80 text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-slate-950/80 dark:bg-slate-950/80 light:bg-slate-50 border border-slate-700/80 dark:border-slate-700/80 light:border-slate-300 text-sm text-slate-200 dark:text-slate-200 light:text-slate-800 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
               />
               {searchQuery && (
                 <button
                   type="button"
                   onClick={() => setSearchQuery('')}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-200"
                 >
                   <X className="w-4 h-4" />
                 </button>
@@ -121,7 +121,7 @@ export default function Technologies() {
                   className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
                     selectedCategory === cat
                       ? 'bg-purple-600 text-white shadow-md shadow-purple-900/40 border border-purple-400/30'
-                      : 'bg-slate-800/80 text-slate-300 hover:bg-slate-700/80 hover:text-white border border-slate-700/50'
+                      : 'bg-slate-800/80 dark:bg-slate-800/80 light:bg-slate-100 text-slate-300 dark:text-slate-300 light:text-slate-700 hover:bg-slate-700/80 dark:hover:bg-slate-700/80 light:hover:bg-slate-200 border border-slate-700/50 dark:border-slate-700/50 light:border-slate-200'
                   }`}
                 >
                   {cat}
@@ -134,10 +134,10 @@ export default function Technologies() {
               <select
                 value={selectedStatus}
                 onChange={(e) => setSelectedStatus(e.target.value)}
-                className="w-full py-2.5 px-3 rounded-xl bg-slate-950/80 border border-slate-700/80 text-xs font-medium text-slate-200 focus:outline-none focus:ring-2 focus:ring-purple-500 cursor-pointer"
+                className="w-full py-2.5 px-3 rounded-xl bg-slate-950/80 dark:bg-slate-950/80 light:bg-slate-50 border border-slate-700/80 dark:border-slate-700/80 light:border-slate-300 text-xs font-medium text-slate-200 dark:text-slate-200 light:text-slate-800 focus:outline-none focus:ring-2 focus:ring-purple-500 cursor-pointer"
               >
                 {statuses.map((status) => (
-                  <option key={status} value={status} className="bg-slate-900 text-slate-200">
+                  <option key={status} value={status} className="bg-slate-900 dark:bg-slate-900 light:bg-white text-slate-200 dark:text-slate-200 light:text-slate-800">
                     {status}
                   </option>
                 ))}
@@ -147,7 +147,7 @@ export default function Technologies() {
                 <button
                   type="button"
                   onClick={clearFilters}
-                  className="px-3 py-2.5 rounded-xl bg-rose-500/10 hover:bg-rose-500/20 text-rose-300 border border-rose-500/30 text-xs font-semibold whitespace-nowrap transition-colors"
+                  className="px-3 py-2.5 rounded-xl bg-rose-500/10 hover:bg-rose-500/20 text-rose-300 dark:text-rose-300 light:text-rose-600 border border-rose-500/30 text-xs font-semibold whitespace-nowrap transition-colors"
                   title="Clear all active filters"
                 >
                   Clear
@@ -166,33 +166,33 @@ export default function Technologies() {
               return (
                 <div
                   key={tech.id}
-                  className="flex flex-col justify-between p-6 rounded-2xl bg-slate-900/60 border border-slate-800/90 hover:border-purple-500/50 transition-all duration-300 shadow-lg hover:shadow-purple-950/40 backdrop-blur-md group hover:-translate-y-1"
+                  className="flex flex-col justify-between p-6 rounded-2xl bg-slate-900/60 dark:bg-slate-900/60 light:bg-white border border-slate-800/90 dark:border-slate-800/90 light:border-slate-200 hover:border-purple-500/50 transition-all duration-300 shadow-lg hover:shadow-purple-950/40 dark:hover:shadow-purple-950/40 light:hover:shadow-purple-100 backdrop-blur-md group hover:-translate-y-1"
                 >
                   <div>
                     {/* Header Row */}
                     <div className="flex items-center justify-between gap-3 mb-4">
                       <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-xl bg-purple-950/80 border border-purple-500/30 flex items-center justify-center text-cyan-400 group-hover:scale-110 group-hover:text-purple-300 transition-all">
+                        <div className="w-10 h-10 rounded-xl bg-purple-950/80 dark:bg-purple-950/80 light:bg-purple-50 border border-purple-500/30 dark:border-purple-500/30 light:border-purple-200 flex items-center justify-center text-cyan-400 dark:text-cyan-400 light:text-purple-600 group-hover:scale-110 group-hover:text-purple-300 transition-all">
                           <IconComponent className="w-5 h-5" />
                         </div>
                         <div>
-                          <h3 className="text-lg font-bold text-white group-hover:text-purple-200 transition-colors">
+                          <h3 className="text-lg font-bold text-white dark:text-white light:text-slate-900 group-hover:text-purple-200 dark:group-hover:text-purple-200 light:group-hover:text-purple-600 transition-colors">
                             {tech.name}
                           </h3>
-                          <span className="text-[10px] font-mono text-slate-400 uppercase tracking-wider">
+                          <span className="text-[10px] font-mono text-slate-400 dark:text-slate-400 light:text-slate-500 uppercase tracking-wider">
                             {tech.category}
                           </span>
                         </div>
                       </div>
 
                       {/* Status Badge */}
-                      <span className="px-2.5 py-1 rounded-full text-[11px] font-medium bg-purple-500/10 text-purple-300 border border-purple-500/30">
+                      <span className="px-2.5 py-1 rounded-full text-[11px] font-medium bg-purple-500/10 dark:bg-purple-500/10 light:bg-purple-50 text-purple-300 dark:text-purple-300 light:text-purple-700 border border-purple-500/30 dark:border-purple-500/30 light:border-purple-200">
                         {tech.status}
                       </span>
                     </div>
 
                     {/* Short Description */}
-                    <p className="text-xs text-slate-300 leading-relaxed mb-4 line-clamp-2">
+                    <p className="text-xs text-slate-300 dark:text-slate-300 light:text-slate-600 leading-relaxed mb-4 line-clamp-2">
                       {tech.description}
                     </p>
 
@@ -201,7 +201,7 @@ export default function Technologies() {
                       {tech.topics.map((topic) => (
                         <span
                           key={topic}
-                          className="px-2 py-0.5 rounded-md bg-slate-800/80 border border-slate-700/60 text-[11px] text-slate-300 font-mono"
+                          className="px-2 py-0.5 rounded-md bg-slate-800/80 dark:bg-slate-800/80 light:bg-slate-100 border border-slate-700/60 dark:border-slate-700/60 light:border-slate-200 text-[11px] text-slate-300 dark:text-slate-300 light:text-slate-700 font-mono"
                         >
                           {topic}
                         </span>
@@ -213,11 +213,11 @@ export default function Technologies() {
                   <div>
                     {tech.progress !== undefined && (
                       <div className="mb-4">
-                        <div className="flex items-center justify-between text-[10px] font-mono text-slate-400 mb-1">
+                        <div className="flex items-center justify-between text-[10px] font-mono text-slate-400 dark:text-slate-400 light:text-slate-500 mb-1">
                           <span>Exploration Progress</span>
-                          <span className="text-cyan-400 font-bold">{tech.progress}%</span>
+                          <span className="text-cyan-400 dark:text-cyan-400 light:text-purple-600 font-bold">{tech.progress}%</span>
                         </div>
-                        <div className="w-full h-1.5 bg-slate-800 rounded-full overflow-hidden">
+                        <div className="w-full h-1.5 bg-slate-800 dark:bg-slate-800 light:bg-slate-200 rounded-full overflow-hidden">
                           <div
                             className="h-full bg-gradient-to-r from-purple-500 to-cyan-400 rounded-full transition-all duration-500"
                             style={{ width: `${tech.progress}%` }}
@@ -229,7 +229,7 @@ export default function Technologies() {
                     <button
                       type="button"
                       onClick={() => setActiveModalTech(tech)}
-                      className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold text-slate-200 bg-slate-800/80 hover:bg-purple-600 hover:text-white border border-slate-700/80 hover:border-purple-500 transition-all duration-200 group-hover:shadow-md cursor-pointer focus:outline-none focus:ring-2 focus:ring-purple-400"
+                      className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold text-slate-200 dark:text-slate-200 light:text-slate-800 bg-slate-800/80 dark:bg-slate-800/80 light:bg-slate-100 hover:bg-purple-600 hover:text-white dark:hover:bg-purple-600 light:hover:bg-purple-600 light:hover:text-white border border-slate-700/80 dark:border-slate-700/80 light:border-slate-300 hover:border-purple-500 transition-all duration-200 group-hover:shadow-md cursor-pointer focus:outline-none focus:ring-2 focus:ring-purple-400"
                     >
                       <span>Explore Topics</span>
                       <ChevronRight className="w-3.5 h-3.5" />
@@ -241,10 +241,10 @@ export default function Technologies() {
           </div>
         ) : (
           /* Empty State */
-          <div className="text-center py-16 p-8 rounded-2xl bg-slate-900/40 border border-slate-800">
+          <div className="text-center py-16 p-8 rounded-2xl bg-slate-900/40 dark:bg-slate-900/40 light:bg-white border border-slate-800 dark:border-slate-800 light:border-slate-200">
             <Filter className="w-12 h-12 text-slate-600 mx-auto mb-4" />
-            <h3 className="text-lg font-bold text-white mb-2">No matching technologies found</h3>
-            <p className="text-sm text-slate-400 mb-6 max-w-md mx-auto">
+            <h3 className="text-lg font-bold text-white dark:text-white light:text-slate-900 mb-2">No matching technologies found</h3>
+            <p className="text-sm text-slate-400 dark:text-slate-400 light:text-slate-600 mb-6 max-w-md mx-auto">
               We couldn't find any technology matching "{searchQuery}" with the selected filters.
             </p>
             <button

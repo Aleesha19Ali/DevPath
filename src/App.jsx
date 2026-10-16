@@ -13,7 +13,7 @@ import BackToTop from './components/BackToTop';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#0b0f19] text-slate-300 font-['Inter',sans-serif] selection:bg-purple-500/30 selection:text-purple-200">
+    <div className="min-h-screen bg-[#0b0f19] dark:bg-[#0b0f19] light:bg-slate-50 text-slate-300 dark:text-slate-300 light:text-slate-800 font-['Inter',sans-serif] selection:bg-purple-500/30 selection:text-purple-200">
       {/* Sticky Header Navigation */}
       <Navbar />
 
