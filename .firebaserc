@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "dev-path-portfolio"
-  }
+    "default": "devpath-835bb"
+  },
+  "targets": {},
+  "etags": {}
 }

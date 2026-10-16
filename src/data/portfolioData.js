@@ -460,8 +460,8 @@ export const contactData = {
   description: "I am actively looking for software engineering internship opportunities where I can contribute, learn from experienced mentors, and build impactful software.",
   placeholders: {
     email: "student.dev@example.com", // Set your email here
-    github: "https://github.com/your-username",
-    linkedin: "https://linkedin.com/in/your-profile",
+    github: "https://github.com/Aleesha19Ali",
+    linkedin: "https://www.linkedin.com/in/aleesha-ali-3bb454307/?isSelfProfile=true",
   },
   note: "Note: The email copy button is functional and social links can be configured with your profile URLs."
 };
