@@ -70,22 +70,22 @@ dist/index.html   1.2 kB
           <div className="lg:col-span-7 flex flex-col items-start text-left">
 
             {/* Status Pill Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-purple-500/30 text-xs font-medium text-purple-300 shadow-md shadow-purple-950/40 mb-6 backdrop-blur-md">
-              <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 dark:bg-slate-900/90 light:bg-purple-50 border border-purple-500/30 text-xs font-medium text-purple-300 dark:text-purple-300 light:text-purple-700 shadow-md mb-6 backdrop-blur-md">
+              <span className="w-2 h-2 rounded-full bg-cyan-400 dark:bg-cyan-400 light:bg-cyan-600 animate-pulse" />
               <span>{portfolioInfo.statusLabel}</span>
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.15] mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white dark:text-white light:text-slate-900 leading-[1.15] mb-6">
               Building My Future, <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-indigo-300 to-cyan-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-indigo-300 to-cyan-400 dark:from-purple-400 dark:via-indigo-300 dark:to-cyan-400 light:from-purple-600 light:via-indigo-600 light:to-cyan-600">
                 One Line of Code
               </span>{' '}
               at a Time.
             </h1>
 
             {/* Supporting Text */}
-            <p className="text-base sm:text-lg text-slate-300 font-normal leading-relaxed mb-8 max-w-2xl">
+            <p className="text-base sm:text-lg text-slate-300 dark:text-slate-300 light:text-slate-600 font-normal leading-relaxed mb-8 max-w-2xl">
               {portfolioInfo.subheading}
             </p>
 
@@ -93,36 +93,36 @@ dist/index.html   1.2 kB
             <div className="flex flex-wrap items-center gap-4 w-full sm:w-auto">
               <button
                 type="button"
-                onClick={() => handleScroll('technologies')}
+                onClick={() => handleScroll('learning-path')}
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm text-white bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-600 hover:from-purple-500 hover:to-cyan-500 shadow-lg shadow-purple-900/30 hover:shadow-purple-600/40 transition-all duration-300 active:scale-95 cursor-pointer focus:outline-none focus:ring-2 focus:ring-purple-400"
               >
-                <span>Explore My Skills</span>
+                <span>Explore My Journey</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
 
               <button
                 type="button"
                 onClick={() => handleScroll('projects')}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm text-slate-200 bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-slate-600 shadow-md transition-all duration-200 active:scale-95 cursor-pointer focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm text-slate-200 dark:text-slate-200 light:text-slate-800 bg-slate-900/80 dark:bg-slate-900/80 light:bg-white border border-slate-700/80 dark:border-slate-700/80 light:border-slate-300 shadow-md hover:bg-slate-800 dark:hover:bg-slate-800 light:hover:bg-slate-100 transition-all duration-200 active:scale-95 cursor-pointer focus:outline-none focus:ring-2 focus:ring-purple-500"
               >
-                <Code className="w-4 h-4 text-cyan-400" />
+                <Code className="w-4 h-4 text-cyan-400 dark:text-cyan-400 light:text-purple-600" />
                 <span>View My Projects</span>
               </button>
             </div>
 
             {/* Quick Feature Highlights */}
-            <div className="mt-10 pt-8 border-t border-slate-800/80 grid grid-cols-3 gap-4 w-full max-w-xl">
+            <div className="mt-10 pt-8 border-t border-slate-800/80 dark:border-slate-800/80 light:border-slate-200/80 grid grid-cols-3 gap-4 w-full max-w-xl">
               <div>
-                <span className="block text-2xl font-bold text-white font-mono">12+</span>
-                <span className="text-xs text-slate-400">Tech Cards</span>
+                <span className="block text-2xl font-bold text-white dark:text-white light:text-slate-900 font-mono">12+</span>
+                <span className="text-xs text-slate-400 dark:text-slate-400 light:text-slate-500">Tech Cards</span>
               </div>
               <div>
-                <span className="block text-2xl font-bold text-cyan-400 font-mono">6</span>
-                <span className="text-xs text-slate-400">Roadmap Stages</span>
+                <span className="block text-2xl font-bold text-cyan-400 dark:text-cyan-400 light:text-purple-600 font-mono">6</span>
+                <span className="text-xs text-slate-400 dark:text-slate-400 light:text-slate-500">Roadmap Stages</span>
               </div>
               <div>
-                <span className="block text-2xl font-bold text-purple-400 font-mono">100%</span>
-                <span className="text-xs text-slate-400">Hands-on Growth</span>
+                <span className="block text-2xl font-bold text-purple-400 dark:text-purple-400 light:text-indigo-600 font-mono">100%</span>
+                <span className="text-xs text-slate-400 dark:text-slate-400 light:text-slate-500">Hands-on Growth</span>
               </div>
             </div>
 
@@ -130,10 +130,10 @@ dist/index.html   1.2 kB
 
           {/* Right Column: Interactive Code Editor Mockup */}
           <div className="lg:col-span-5 w-full">
-            <div className="relative rounded-2xl border border-slate-700/60 bg-[#0d121f]/90 shadow-2xl shadow-purple-950/50 backdrop-blur-xl overflow-hidden group">
+            <div className="relative rounded-2xl border border-slate-700/60 dark:border-slate-700/60 light:border-slate-300 bg-[#0d121f]/90 dark:bg-[#0d121f]/90 light:bg-slate-900 shadow-2xl shadow-purple-950/50 backdrop-blur-xl overflow-hidden group">
 
               {/* Top Bar with window controls & tabs */}
-              <div className="flex items-center justify-between px-4 py-3 bg-[#080b13] border-b border-slate-800">
+              <div className="flex items-center justify-between px-4 py-3 bg-[#080b13] dark:bg-[#080b13] light:bg-slate-950 border-b border-slate-800">
                 <div className="flex items-center space-x-2">
                   <div className="w-3 h-3 rounded-full bg-rose-500/80" />
                   <div className="w-3 h-3 rounded-full bg-amber-500/80" />
@@ -171,7 +171,7 @@ dist/index.html   1.2 kB
               </div>
 
               {/* Status footer bar inside editor */}
-              <div className="px-4 py-2 bg-[#080b13]/90 border-t border-slate-800/80 flex items-center justify-between text-[11px] text-slate-400 font-mono">
+              <div className="px-4 py-2 bg-[#080b13]/90 dark:bg-[#080b13]/90 light:bg-slate-950 border-t border-slate-800/80 flex items-center justify-between text-[11px] text-slate-400 font-mono">
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-emerald-400 inline-block" />
                   <span>Dev Path Environment Active</span>

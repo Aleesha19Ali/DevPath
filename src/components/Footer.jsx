@@ -25,22 +25,22 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#070a12] border-t border-slate-800/80 py-12">
+    <footer className="bg-[#070a12] dark:bg-[#070a12] light:bg-slate-100 border-t border-slate-800/80 dark:border-slate-800/80 light:border-slate-200/80 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
 
           {/* Logo & Tagline */}
           <div className="flex items-center gap-3">
             <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-purple-600 to-cyan-500 p-[1px]">
-              <div className="w-full h-full bg-[#0b0f19] rounded-[11px] flex items-center justify-center">
+              <div className="w-full h-full bg-[#0b0f19] dark:bg-[#0b0f19] light:bg-slate-900 rounded-[11px] flex items-center justify-center">
                 <Code2 className="w-4 h-4 text-cyan-400" />
               </div>
             </div>
             <div>
-              <span className="font-extrabold text-lg text-white">
-                Dev<span className="text-purple-400">Path</span>
+              <span className="font-extrabold text-lg text-white dark:text-white light:text-slate-900">
+                Dev<span className="text-purple-400 dark:text-purple-400 light:text-purple-600">Path</span>
               </span>
-              <p className="text-xs text-slate-400 font-mono">
+              <p className="text-xs text-slate-400 dark:text-slate-400 light:text-slate-500 font-mono">
                 {portfolioInfo.tagline}
               </p>
             </div>
@@ -53,7 +53,7 @@ export default function Footer() {
                 key={link.name}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="text-xs font-medium text-slate-400 hover:text-white transition-colors"
+                className="text-xs font-medium text-slate-400 dark:text-slate-400 light:text-slate-600 hover:text-white dark:hover:text-white light:hover:text-slate-900 transition-colors"
               >
                 {link.name}
               </a>
